@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        console.log("Hello", window.location.hostname)
+        if (window.location.hostname === "madevat.github.io") {
+            console.log("Hello inside if")
+            const urlParams = new URLSearchParams(window.location.search);
+            const short = urlParams.get('short');
+            var targetURL = "https://url-shortner-service-madeva-url-shortner.bnr-vpc-house-98b7318c91b01bd72490e80cc2328915-0000.us-south.containers.appdomain.cloud"
+            if (short){
+                targetURL=targetURL+"/"+short
+            }
+
+           
+
+            // Redirect to the new URL
+            window.location.replace(targetURL);
+        }
+    </script>
+</head>
+<body></body>
+</html>
